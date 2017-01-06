@@ -1,9 +1,5 @@
-import tensorflow as tf
 import numpy as np
-%matplotlib inline
-%config InlineBackend.figure_format = 'svg'
 import matplotlib.pyplot as plt
-matplotlib.rcParams['figure.figsize'] = (14.0, 7.0)
 from matplotlib.patches import Circle
 import seaborn as sns # for pretty plots
 from scipy.stats import norm
@@ -226,7 +222,7 @@ def calcWs(alphas,dataArr,classLabels):
     for i in range(m):
         w += multiply(alphas[i]*labelMat[i],X[i,:].T)
     return w
-0
+
 def testRbf(k1=1.3):
     dataArr,labelArr = loadDataSet('testSetRBF2.txt')
     datMat=mat(dataArr); labelMat = mat(labelArr).transpose()
